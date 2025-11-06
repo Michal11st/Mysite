@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Digital s.r.o.</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #222;
+            font-size: 20px;
+        }
+
+        section {
+            padding: 80px 10%;
+        }
+
+        h1, h2, h3 {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 48px;
+        }
+
+        h2 {
+            font-size: 36px;
+        }
+
+        p {
+            line-height: 1.7;
+        }
+
+        /* --- HLAVNÍ OBRAZOVKA --- */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1622675363311-3e1904dc1885?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170') no-repeat center center/cover;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.55);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+        }
+
+        .hero button {
+            background-color: #0077b6;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            margin-top: 25px;
+            font-size: 22px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .hero button:hover {
+            background-color: #0096c7;
+        }
+
+        /* --- O NÁS --- */
+        .about {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .about img {
+            width: 45%;
+            border-radius: 10px;
+        }
+
+        /* --- SLUŽBY --- */
+        .services {
+            background-color: #f1f1f1;
+        }
+
+        .service-item {
+            margin-bottom: 40px;
+        }
+
+        /* --- VÝHODY --- */
+        .advantages {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .advantage {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        /* --- PROCES --- */
+        .process {
+            background-color: #f1f1f1;
+        }
+
+        .process-step {
+            margin-bottom: 30px;
+        }
+
+        /* --- KONTAKT --- */
+        .contact {
+            background-color: #111;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 10%;
+            flex-wrap: wrap;
+            height: 100vh;
+        }
+
+        .contact img {
+            width: 45%;
+            border-radius: 10px;
+        }
+
+        .contact-info {
+            max-width: 600px;
+        }
+
+        .contact a {
+            color: #00b4d8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- HLAVNÍ OBRAZOVKA -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1><b>One Digital s.r.o.</b></h1>
+            <p>Pomáháme firmám řídit jejich provoz, digitalizovat interní procesy a efektivně spravovat IT infrastrukturu. Naším cílem je propojit manažerské zkušenosti s technologickými řešeními, která posouvají byznys kupředu.</p>
+            <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">Kontaktujte nás</button>
+        </div>
+    </section>
+
+    <!-- O NÁS -->
+    <section>
+        <h2>Kdo jsme a proč dává naše práce smysl</h2>
+        <div class="about">
+            <div class="about-text">
+                <p>Jsme tým odborníků, kteří spojují zkušenosti z oblasti business managementu, administrativy a IT podpory. Naše práce spočívá ve zjednodušení každodenních firemních procesů pomocí digitálních nástrojů, automatizace a promyšlené organizace.  
+                Pomáháme firmám růst bez zbytečné zátěže – zajišťujeme komplexní administrativní i softwarovou podporu, která se přizpůsobí individuálním potřebám klienta.  
+                Věříme, že dobře řízený a digitalizovaný byznys je klíčem k dlouhodobé stabilitě a rozvoji.</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1762164509589-441e2bae95a3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE2fHxCdXNpbmVzcyUyQyUyMG1hbmFnZW1lbnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600" alt="O nás">
+        </div>
+    </section>
+
+    <!-- SLUŽBY -->
+    <section class="services">
+        <h2>Co pro vás umíme udělat</h2>
+
+        <div class="service-item">
+            <h3>Business & Administrative Management</h3>
+            <p>Pomáháme s plánováním, řízením a optimalizací administrativních procesů. Naše služby zahrnují reporting, nastavování interních procesů a organizační podporu vedení společnosti.</p>
+        </div>
+
+        <div class="service-item">
+            <h3>IT Support & Infrastructure</h3>
+            <p>Zajišťujeme komplexní IT podporu – od správy systémů, přes bezpečnostní opatření až po implementaci nových technologií. Každé řešení navrhujeme s ohledem na efektivitu a dlouhodobou udržitelnost.</p>
+        </div>
+
+        <div class="service-item">
+            <h3>Soft Support & Automation</h3>
+            <p>Vyvíjíme a implementujeme softwarové nástroje, které zrychlují práci týmů. Automatizujeme rutinní úkoly a pomáháme firmám soustředit se na to, co je opravdu důležité – jejich hlavní byznys.</p>
+        </div>
+    </section>
+
+    <!-- VÝHODY SPOLUPRÁCE -->
+    <section>
+        <h2>Proč spolupracovat právě s námi</h2>
+        <div class="advantages">
+            <div class="advantage">
+                <h3>Individuální přístup</h3>
+                <p>Každý klient má jiné potřeby. Proto přistupujeme ke každému projektu osobně a vytváříme řešení na míru.</p>
+            </div>
+            <div class="advantage">
+                <h3>Propojení managementu a IT</h3>
+                <p>Naše síla spočívá ve spojení obchodní strategie s technologickým know-how. Díky tomu přinášíme ucelená řešení.</p>
+            </div>
+            <div class="advantage">
+                <h3>Spolehlivost a důvěra</h3>
+                <p>Budujeme dlouhodobé vztahy založené na otevřené komunikaci, profesionalitě a transparentnosti.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCES -->
+    <section class="process">
+        <h2>Jak spolupráce probíhá</h2>
+        <div class="process-step">
+            <h3>1. Analýza potřeb</h3>
+            <p>Na začátku se detailně seznámíme s vaší firmou, procesy a cíli, abychom přesně pochopili, kde můžeme přinést největší přidanou hodnotu.</p>
+        </div>
+
+        <div class="process-step">
+            <h3>2. Návrh řešení</h3>
+            <p>Připravíme konkrétní návrh digitalizačních nebo organizačních kroků a stanovíme plán jejich implementace.</p>
+        </div>
+
+        <div class="process-step">
+            <h3>3. Realizace a podpora</h3>
+            <p>Po schválení se pouštíme do práce. Zajistíme implementaci, testování i následnou dlouhodobou podporu.</p>
+        </div>
+    </section>
+
+    <!-- KONTAKTY -->
+    <section class="contact" id="contact">
+        <div class="contact-info">
+            <h2>Zůstaňme ve spojení</h2>
+            <p>Máte otázky nebo zájem o spolupráci? Napište nám – rádi s vámi probereme, jak může One Digital s.r.o. podpořit váš byznys a digitalizaci procesů.</p>
+            <p><strong>E-mail:</strong> <a href="mailto:info@onedigital-sro.services">info@onedigital-sro.services</a></p>
+            <p><strong>Adresa:</strong> Křemešnická 650, Pelhřimov 393 01</p>
+        </div>
+    </section>
+
+</body>
+</html>
